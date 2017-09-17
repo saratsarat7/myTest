@@ -1,7 +1,7 @@
 struct platformVar {
    int  varId;
    char varData[100];
-}; 
+};
 
 struct staticVar {
 	char s1[10];
@@ -12,4 +12,9 @@ struct staticVar {
 	char s6[1];
 	float s7;
 	struct platformVar s8;
+};
+
+struct offsetVar {
+  int offset;
+  int length;
 };
