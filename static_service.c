@@ -8,6 +8,8 @@ void main()
 {
   FILE * staticFp;
 
+  char temp[20];
+
 	staticFp = fopen (statFilename, "rb");
 	// fread(p,sizeof(struct staticVar),1,fp);
 
@@ -21,7 +23,13 @@ void main()
 
   fread(ptr,lengthOfFile,1,staticFp);
 
-  printf("%s", ptr);
+  printf("This is data :\n%s", ptr);
+  printf("This is pointer address:\n%p", ptr);
+
+  scanf("Enter some data :%s", temp);
+
+  printf("This is modified data :\n%s", ptr);
 
   fclose(staticFp);
+  free(ptr);
 }
